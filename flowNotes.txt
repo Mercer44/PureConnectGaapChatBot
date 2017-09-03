@@ -1,0 +1,48 @@
+create connect
+--------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/connection?include=features,effective-station
+
+{"__type":"urn:inin.com:connection:icAuthConnectionRequestSettings","applicationName":"ICWS JavaScript Direct Usage Example","userID":"agent.one","password":"545456"}
+
+login station
+--------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/connection/station
+
+{"persistentConnection":false,"remoteNumber":"3175226312","supportedMediaTypes":[2,3],"stationConnectionMode":0,"readyForInteractions":true,"__type":"urn:inin.com:connection:remoteNumberSettings"}
+
+get status messages
+-------------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/status/status-messages
+
+
+get current statuses
+--------------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/status/status-messages-user-access/agent.one
+
+subscribe to my status
+----------------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/messaging/subscriptions/status/user-statuses
+
+{"userIds":["agent.one"]}
+
+
+sub to my queue
+---------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/messaging/subscriptions/queues/my-interactions-queue
+{"queueIds":[{"queueType":0,"queueName":"agent.one"}],"attributeNames":["Eic_CallDirection","Eic_CallStateString","Eic_CallbackAssociatedCallId","Eic_Capabilities","Eic_ConferenceId","Eic_Details","Eic_EmailAttachments","Eic_EmailChildren","Eic_EmailImportance","Eic_EmailParent","Eic_EmailSubject","Eic_IRSnippetRecordingId","Eic_ImmediateAccess","Eic_InitiationTime","Eic_MonitoredObjectId","Eic_Monitors","Eic_MonitorsSupv","Eic_Muted","Eic_ObjectType","Eic_Private","Eic_RecordedObjectId","Eic_Recorders","Eic_RecordersSupv","Eic_RecordingsAutoResumeTime","Eic_RemoteId","Eic_RemoteName","Eic_ScreenPopData","Eic_SecureRecordingPauseStartTime","Eic_State","Eic_Subject","Eic_TargetMediaType","Eic_TerminationTime","Eic_WSAnyChatUserTyping","Eic_WSLastExternalUserText","Eic_WSLastInternalUserText","Eic_WSLastTypedExternalUser","Eic_WSLastTypedInternalUser","Eic_WSLastTypedUserType","Eic_WorkgroupName","Eic_WrapUpCodeSet","Eic_WrapupConnectionSegments","is_attr_campaignid"]}
+
+
+sub to alerting
+---------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/messaging/subscriptions/interaction-alerting
+{}
+
+
+sub to alerting chat
+--------------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/messaging/subscriptions/interactions/{interaction-id}/chat
+
+on alerting, answer
+-------------------
+https://katemiami2.live.genesys.com/PODCONNECT56/client/api/pod56-08261713.simdomain.com/icws/14203001/interactions/{interactionId}/pickup
+

@@ -1,0 +1,6 @@
+{
+	"baseUrl":"https://katemiami1-gaap.live.genesys.com",
+	"auth_token":"294a46a4fb0272be57d37fd517517c1298c78f3a09dd1c9c43ff7b5fbf961a85",
+	"site_id":555,
+	"is_test_call":true
+}
