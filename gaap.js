@@ -52,7 +52,7 @@ function startGaap(interactionId, name) {
 	  body: startChatBody,
 	  json: true,
 	  jar: gaapCookieJars[interactionId],
-	  url: config.baseUrl + '/fish-messaging/CBPStart2.jsp'
+	  url: config.baseUrl + '/fish-messaging/CBPStart.jsp'
 	}
     request(options, function (err, res, body) {
 		if (err) {
